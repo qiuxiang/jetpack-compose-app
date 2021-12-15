@@ -1,0 +1,31 @@
+plugins {
+  id "com.android.application"
+  id "kotlin-android"
+}
+
+android {
+  compileSdk 31
+
+  defaultConfig {
+    applicationId "com.example.app"
+    minSdk 21
+    targetSdk 31
+    versionCode 1
+    versionName "1.0"
+  }
+  composeOptions {
+    kotlinCompilerExtensionVersion compose_version
+    kotlinCompilerVersion '1.6.0'
+  }
+  buildFeatures {
+    compose true
+  }
+}
+
+dependencies {
+  implementation "androidx.appcompat:appcompat:1.4.0"
+  implementation "com.google.android.material:material:1.4.0"
+  implementation "androidx.compose.ui:ui:$compose_version"
+  implementation "androidx.compose.material:material:$compose_version"
+  implementation "androidx.activity:activity-compose:1.4.0"
+}
